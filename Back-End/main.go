@@ -29,7 +29,7 @@ func main() {
 
     // Configura as políticas de CORS, permitindo que a API seja acessada apenas da origem "http://127.0.0.1:3000"
     r.Use(cors.New(cors.Config{
-        AllowOrigins:     []string{"http://127.0.0.1:3000"},  
+        AllowOrigins:     []string{"*"},  
         AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},  
         AllowHeaders:     []string{"Origin", "Content-Type"},  
         ExposeHeaders:    []string{"Content-Length"}, 
