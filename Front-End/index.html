@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Gestão boa</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="title">
+    <img src="logo.png" alt="logo" width="50" height="50">
+    <h1>Gestão Boa</h1>
+  </div>
+
+  <h2>Adicionar Personagem</h2>
+  <form id="addCharacterForm">
+    <input type="text" id="name" placeholder="Nome" required>
+    <input type="text" id="status" placeholder="Status" required>
+    <input type="text" id="species" placeholder="Especie" required>
+    <input type="text" id="type" placeholder="Tipo">
+    <input type="text" id="gender" placeholder="Gênero" required>
+    <input type="text" id="image" placeholder="URL imagem" required>
+    <input type="text" id="url" placeholder="URL" required>
+    <button type="submit">Adicionar Personagem</button>
+  </form>
+
+  <div class="Search">
+    <h2>Buscar Personagem por ID</h2>
+    <input type="number" id="searchId" placeholder="Colocar ID">
+    <button onclick="searchCharacter()">Buscar</button>
+    <div id="characterDetail"></div>
+  </div>
+
+  <div class="deleteCharacter">
+    <h2>Deletar Personagem por ID</h2>
+    <input type="number" id="deleteId" placeholder="ID do personagem">
+    <button onclick="deleteCharacter()">Deletar</button>
+  </div>  
+
+  <h2>Listar Personagens</h2>
+  <div class="listButtons">
+    <button onclick="listCharacter('asc')">Listas A-Z</button>
+    <button onclick="listCharacter('desc')">Listar Z-A</button>
+    <button onclick="listCharacter()">Listar Todos</button>
+    <button onclick="listCharacter('Alive')">Mostrar Vivos</button>
+    <button onclick="listCharacter('Dead')">Mostrar Mortos</button>
+  </div>
+  <ul id="characterList"></ul>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
