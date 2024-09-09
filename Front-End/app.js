@@ -26,7 +26,7 @@ document.getElementById('addCharacterForm').addEventListener('submit', async (e)
     });
 
     const result = await response.json();
-    alert('Personagem Adicionado: ' + JSON.stringify(result));
+    alert('Adicionar Personagem: ' + JSON.stringify(result));
     listCharacter();
   } catch (error) {
     console.error('Erro ao adicionar personagem:', error);
